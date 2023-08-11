@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { Scraper } from '../../src/scraper.ts';
+import { Scraper } from '../src/scraper.ts';
 
 describe('Module Scraper', function () {
   const ScraperInstance = new Scraper('https://www.google.com/');
