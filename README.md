@@ -1,3 +1,3 @@
 # webpuppet
 
-A simple web scraper that uses puppeteer
+This is a package developed for the purpose of scraping data of websites.

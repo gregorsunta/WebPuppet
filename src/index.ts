@@ -1,1 +1,1 @@
-export { Scraper } from './scraper.ts';
+export { Scraper } from './scraper.js';

@@ -6,6 +6,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.1",
     "mocha": "^10.2.0",
+    "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
@@ -17,7 +18,7 @@
     "esModuleInterop": true
   },
   "name": "webpuppet",
-  "description": "A simple web scraper that uses puppeteer",
+  "description": "A simple web scraper that uses puppeteer.",
   "version": "1.0.0",
   "author": "gregorsunta",
   "license": "ISC",

@@ -1,5 +1,5 @@
 import puppeteer, { Browser, ElementHandle, Page } from 'puppeteer';
-import ExtendedHandle from './ExtendedHandle.ts';
+import ExtendedHandle from './ExtendedHandle.js';
 
 export class Scraper {
   baseUrl: string;
