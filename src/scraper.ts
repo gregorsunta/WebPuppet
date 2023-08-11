@@ -1,7 +1,7 @@
-import puppeteer, { Browser, ElementHandle, JSHandle, Page } from 'puppeteer';
-import ExtendedHandle from './ExtendedHandle.js';
+import puppeteer, { Browser, ElementHandle, Page } from 'puppeteer';
+import ExtendedHandle from './ExtendedHandle.ts';
 
-class Scraper {
+export class Scraper {
   baseUrl: string;
   browser!: Browser;
   page!: Page;
@@ -50,5 +50,3 @@ class Scraper {
     return new ExtendedHandle(handle);
   };
 }
-
-export default Scraper;

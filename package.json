@@ -10,9 +10,18 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "test": "mocha --require ts-node/register 'test/**/*.spec.ts' --exit"
+    "test": "mocha --require ts-node/register ./__tests__/**/*spec.ts",
+    "build": "tsc"
   },
   "compilerOptions": {
     "esModuleInterop": true
-  }
+  },
+  "name": "webpuppet",
+  "description": "A simple web scraper that uses puppeteer",
+  "version": "1.0.0",
+  "author": "gregorsunta",
+  "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ]
 }

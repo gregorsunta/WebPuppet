@@ -1,15 +1,13 @@
 import assert from 'node:assert/strict';
-import Scraper from '../src/scraper.js';
+import { Scraper } from '../../src/scraper.ts';
 
-describe('Scraper', function () {
+describe('Module Scraper', function () {
   const ScraperInstance = new Scraper('https://www.google.com/');
-
   describe('baseUrl', function () {
     it('returns the correct baseUrl', function () {
       assert.equal(ScraperInstance.baseUrl, 'https://www.google.com/');
     });
   });
-
   describe('matchesPath', function () {
     const tests = [
       {
@@ -25,7 +23,7 @@ describe('Scraper', function () {
       { description: 'trailing //', args: '/path//', expected: false },
     ];
     tests.forEach(({ description, args, expected }) => {
-      it(`Test with ${description} is evaluated correctly`, function () {
+      it(`${description} is evaluated as ${expected}`, function () {
         assert.equal(ScraperInstance.matchesPath(args), expected);
       });
     });
