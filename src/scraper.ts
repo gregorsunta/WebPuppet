@@ -2,26 +2,30 @@ import puppeteer, { Browser, ElementHandle, Page } from 'puppeteer';
 import ExtendedHandle from './ExtendedHandle.js';
 
 export class Scraper {
-  baseUrl: string;
+  baseUrl!: string;
   browser!: Browser;
   page!: Page;
 
-  constructor(baseUrl: string) {
-    this.baseUrl = baseUrl;
-  }
+  constructor() {}
 
-  init = async () => {
+  init = async (baseUrl: string) => {
+    if (!baseUrl) {
+      console.error('baseUrl is: ', baseUrl);
+    }
     console.info('Initializing scraper');
+
+    this.baseUrl = baseUrl;
     this.browser = await puppeteer.launch({ headless: 'new' });
     this.page = await this.browser.newPage();
   };
 
   goto = async (path: string): Promise<void> => {
-    console.info('Going to path');
-
     if (this.matchesPath(path)) {
       console.error(`Path ${path} does not match path regex`);
     }
+
+    console.info('Going to path');
+
     await this.page.goto(`${this.baseUrl}/${path}`);
   };
 
